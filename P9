@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class A {
+protected:
+    int a = 5;
+};
+
+class B : public A {
+public:
+    void displayB() {
+        cout << "Class B, Value of a: " << a << endl;
+    }
+};
+
+class C : public A {};
+
+class D : public A {};
+
+class E : public B {
+public:
+    void displayE() {
+        cout << "Class E inherits from B, Value of a: " << a << endl;
+    }
+};
+
+int main() {
+    E obj;
+    obj.displayB();
+    obj.displayE();
+    return 0;
+}
