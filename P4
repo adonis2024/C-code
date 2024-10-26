@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+class OverloadSum {
+public:
+    OverloadSum(int a, int b) {
+        cout << "Sum of two integers: " << a + b << endl;
+    }
+    OverloadSum(float a, float b) {
+        cout << "Sum of two floats: " << a + b << endl;
+    }
+    OverloadSum(char a, char b) {
+        cout << "Sum of two chars: " << (a + b) << " (ASCII sum)" << endl;
+    }
+};
+
+int main() {
+    OverloadSum obj1(5, 10);
+    OverloadSum obj2(2.3f, 3.7f);
+    OverloadSum obj3('A', 'B');
+    return 0;
+}
